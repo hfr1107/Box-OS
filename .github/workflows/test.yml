@@ -15,11 +15,11 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - userName: q215613905
-            repoName: TVBoxOS
+          - userName: mzlipro
+            repoName: textile
             branchName: main
-          - userName: takagen99
-            repoName: Box
+          - userName: hfr1107
+            repoName: Hometv1.0.0-Public
             branchName: main
     steps:
       - name: Checkout
