@@ -22,7 +22,7 @@ jobs:
             repoName: textile
             branchName: main
           - userName: hfr1107
-            repoName: Hometv1.0.0-Public
+            repoName: HomeBOX
             branchName: main
           - userName: mayishidai
             repoName: TVBoxOS
