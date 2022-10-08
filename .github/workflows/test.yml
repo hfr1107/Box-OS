@@ -15,18 +15,9 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - userName: kensonmiao
-            repoName: CatVodTVOSC
-            branchName: main
-          - userName: mzlipro
-            repoName: textile
-            branchName: main
-          - userName: hfr1107
-            repoName: HomeBOX
-            branchName: main
-          - userName: mayishidai
-            repoName: TVBoxOS
-            branchName: main            
+          - userName: heroaku
+            repoName: TVBox_TK
+            branchName: main   
     steps:
       - name: Checkout
         uses: actions/checkout@v3
