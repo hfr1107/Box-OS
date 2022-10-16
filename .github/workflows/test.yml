@@ -15,8 +15,8 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - userName: heroaku
-            repoName: TVBox_TK
+          - userName: mayishidai
+            repoName: TVBoxOS
             branchName: main   
     steps:
       - name: Checkout
