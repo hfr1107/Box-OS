@@ -25,11 +25,8 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - userName: mayishidai
-            repoName: TVBoxOS
-            branchName: main
-          - userName: takagen99
-            repoName: Box
+          - userName: hfr1107
+            repoName: mayishidai
             branchName: main
     steps:
       - name: Checkout
@@ -83,10 +80,10 @@ jobs:
           signingConfig="$(echo "$signingConfig" |base64 -d )"
           sed -i -e "/defaultConfig {/i\\$signingConfigs " -e "/debug {/a\\$signingConfig " -e "/release {/a\\$signingConfig " app/build.gradle
           cp -f ${{ github.workspace }}/.github/workflows/TVBoxOSC.jks app/TVBoxOSC.jks
-          sed -i '$a\RELEASE_STORE_FILE=./TVBoxOSC.jks'     ./gradle.properties
-          sed -i '$a\RELEASE_KEY_ALIAS=TVBoxOSC'            ./gradle.properties
-          sed -i '$a\RELEASE_STORE_PASSWORD=TVBoxOSC'       ./gradle.properties
-          sed -i '$a\RELEASE_KEY_PASSWORD=TVBoxOSC'         ./gradle.properties
+          sed -i '$a\RELEASE_STORE_FILE=./homebox.jks'     ./gradle.properties
+          sed -i '$a\RELEASE_KEY_ALIAS=homebox'            ./gradle.properties
+          sed -i '$a\RELEASE_STORE_PASSWORD=homebox'       ./gradle.properties
+          sed -i '$a\RELEASE_KEY_PASSWORD=homebox'         ./gradle.properties
       - name: Setup Gradle
         if: ${{ env.commit }}
         uses: gradle/gradle-build-action@v2
